@@ -51,6 +51,8 @@ Object.freeze(person);
 person.age = 500;
 console.log(person)
 
+const {name, age} = person;
+console.log(name);
 
 
 
