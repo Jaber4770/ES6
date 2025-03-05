@@ -1,8 +1,25 @@
 //  destructuring:
 const person = {
     name: "jack",
-    age: 11
+    age: 11,
+    job: {
+        delivery: {
+            tazz: false,
+            bolt: true,
+            glovo: true
+        },
+        other: "no",
+    }
 }
+
+// optional chaining:
+console.log(person.job.delivery.bolt);
+console.log(person.job.delivery.foodpanda?.mode);
+console.log(person.job?.delivery?.glovo);
+
+
+
+
 const { name, age } = person;
 console.log(name, age);
 
