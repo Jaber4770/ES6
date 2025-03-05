@@ -39,3 +39,17 @@ console.log(Object.entries(person));
 
 
 
+// ---------------------------------------------
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const squareArray = numbers.map(number => number * number);
+console.log(squareArray);
+
+const friends = ["rahim", "karim", "jodo", "modo"];
+const newFriends = friends.map((friend, index) => {
+    console.log(index, friend);
+})
+
+
+
+
