@@ -73,7 +73,7 @@ phones.forEach(phone => {
     }
 });
 
-const filter = phones.filter( phone => phone.price > 1000);
+const filter = phones.filter(phone => phone.price > 1000);
 console.log(filter);
 
 phones.forEach(phone => {
@@ -83,19 +83,19 @@ phones.forEach(phone => {
 const sony = phones.find(phone => phone.name.includes("Sony"));
 console.log(sony);
 
-console.log(phones.find(p=> p.id===4))
+console.log(phones.find(p => p.id === 4))
 
 // ----------------------------------------------------
 // claass
 
-class products{
-    constructor(name,price,brand,owner){
+class products {
+    constructor(name, price, brand, owner) {
         this.name = name;
         this.price = price;
         this.owner = owner;
         this.brand = brand;
     }
-    details(){
+    details() {
         console.log(`Name: ${this.name} Price: ${this.price} owner: ${this.owner} brand: ${this.brand}`);
     }
 }
@@ -104,3 +104,26 @@ const iPhone = new products("iPhone", 1250, "stib jobs", "apple");
 console.log(iPhone);
 
 
+class vehical {
+    constructor(name, price) {
+        this.name = name;
+        this.price = price;
+    }
+    move() {
+        console.log("vehical can move.");
+    }
+}
+
+class Bus extends vehical {
+    constructor(name, price, seat) {
+        super(name, price);
+        this.seat = seat;
+    }
+    route() {
+        console.log("dhaka to brahmanbaria");
+    }
+}
+
+const greenLine = new Bus("greenline", "120", 30);
+console.log(greenLine);
+greenLine.move();
