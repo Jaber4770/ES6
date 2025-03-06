@@ -85,3 +85,22 @@ console.log(sony);
 
 console.log(phones.find(p=> p.id===4))
 
+// ----------------------------------------------------
+// claass
+
+class products{
+    constructor(name,price,brand,owner){
+        this.name = name;
+        this.price = price;
+        this.owner = owner;
+        this.brand = brand;
+    }
+    details(){
+        console.log(`Name: ${this.name} Price: ${this.price} owner: ${this.owner} brand: ${this.brand}`);
+    }
+}
+
+const iPhone = new products("iPhone", 1250, "stib jobs", "apple");
+console.log(iPhone);
+
+
