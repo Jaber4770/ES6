@@ -16,3 +16,31 @@ const showUser = (users) => {
         container.appendChild(li);
     }
 }
+
+const getData = async () => {
+    try {
+        const request = await fetch("https://jsonplaceholder.typicode.com/posts");
+        const data = await request.json();
+        console.log(data);
+    }
+    catch {
+        console.log("error khaisi");
+    }
+}
+getData();
+
+
+setTimeout(() => {
+    console.log("Hello, Alice!");
+}, 5000);
+
+const jokeInterval = setInterval(() => {
+    console.log("Why don't scientists trust atoms? Because they make up everything!");
+}, 2000);
+
+setTimeout(() => {
+    if(jokeInterval <= 10000){
+        clearInterval(jokeInterval);
+    }
+}, 10000);
+
